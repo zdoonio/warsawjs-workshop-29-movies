@@ -25,14 +25,7 @@ export class FilmsService {
   }
 
   deleteFilm(film: Film) {
-    this.httpClient.delete(this.moviesUrl + '/' + film.id).subscribe(
-      data  => {
-        console.log('DELETE Request is successful ', film.id);
-      },
-      error  => {
-        console.log('Error', error);
-      }
-    );
+    return this.httpClient.delete(this.moviesUrl + '/' + film.id);
   }
 
 }

@@ -29,6 +29,14 @@ export class FilmsListComponent implements OnInit {
   }
 
   public deleteMovie(film): void {
-    this.filmsService.deleteFilm(film);
+    this.filmsService.deleteFilm(film).subscribe(() => {
+      this.filmsService.getFilms().subscribe(
+        films => {
+          this.films = films;
+        },
+        error => this.errorMessages = error
+      );
+      }
+    );
   }
 }

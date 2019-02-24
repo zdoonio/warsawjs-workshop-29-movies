@@ -9,8 +9,8 @@
       <mat-card-subtitle></mat-card-subtitle>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-icon-button (click)="toggleFilmDetails()">Show film detail</a><br>
-      <a mat-icon-button (click)="deleteMovie(film)">Delete</a>
+      <button mat-icon-button class="btn btn-info" (click)="toggleFilmDetails()">Show details</button>
+      <button mat-icon-button class="btn btn-warning" (click)="deleteMovie(film)">Delete</button>
     </mat-card-actions>
     <app-film-details *ngIf="filmsDetailIsVisible" [film]=film></app-film-details>
   </mat-card>
