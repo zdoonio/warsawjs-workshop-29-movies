@@ -27,4 +27,8 @@ export class FilmsListComponent implements OnInit {
   public toggleFilmDetails(): void {
     this.filmsDetailIsVisible = !this.filmsDetailIsVisible;
   }
+
+  public deleteMovie(film): void {
+    this.filmsService.deleteFilm(film);
+  }
 }
