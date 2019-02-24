@@ -15,11 +15,4 @@
     <app-film-details *ngIf="filmsDetailIsVisible" [film]=film></app-film-details>
   </mat-card>
 </section>
-<mat-menu #appMenu="matMenu">
-  <button routerLink="/new" mat-menu-item>New</button>
-  <button routerLink="/" mat-menu-item>List</button>
-</mat-menu>
 
-<button mat-icon-button color="primary" [matMenuTriggerFor]="appMenu">
-  More <mat-icon>more_vert</mat-icon>
-</button>

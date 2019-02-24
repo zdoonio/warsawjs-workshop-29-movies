@@ -13,13 +13,15 @@ import { FilmDetailsComponent } from './films/films-list/film-details/film-detai
 import { NewFilmComponent } from './films/new-film/new-film.component';
 import { MatInputModule } from '@angular/material';
 import { AppRoutingModule } from './app-routings.modules';
+import { MenuComponent } from './nav/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsListComponent,
     FilmDetailsComponent,
-    NewFilmComponent
+    NewFilmComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
