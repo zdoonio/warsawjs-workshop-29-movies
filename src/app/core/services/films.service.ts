@@ -27,5 +27,4 @@ export class FilmsService {
   deleteFilm(film: Film) {
     return this.httpClient.delete(this.moviesUrl + '/' + film.id);
   }
-
 }

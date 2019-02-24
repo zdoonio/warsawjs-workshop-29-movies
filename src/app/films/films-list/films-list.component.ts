@@ -28,6 +28,10 @@ export class FilmsListComponent implements OnInit {
     this.filmsDetailIsVisible = !this.filmsDetailIsVisible;
   }
 
+  public newMovie(): void {
+    this.filmsService
+  }
+
   public deleteMovie(film): void {
     this.filmsService.deleteFilm(film).subscribe(() => {
       this.filmsService.getFilms().subscribe(
