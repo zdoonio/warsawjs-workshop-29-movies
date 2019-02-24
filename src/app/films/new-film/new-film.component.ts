@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {Film} from '../film';
 import {FilmsService} from '../../core/services/films.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-film',
@@ -12,7 +13,7 @@ export class NewFilmComponent implements OnInit {
 
   public filmForm: FormGroup;
 
-  constructor(private filmsService: FilmsService) {  }
+  constructor(private filmsService: FilmsService, private router: Router) {  }
 
   ngOnInit() {
     this.initForm();
@@ -34,6 +35,7 @@ export class NewFilmComponent implements OnInit {
     }
     console.log(this.filmForm.value);
     this.filmsService.addFilm(this.filmForm.value as Film);
+    this.router.navigate(['/']);
   }
 
 }
