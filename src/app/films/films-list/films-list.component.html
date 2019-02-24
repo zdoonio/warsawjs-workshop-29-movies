@@ -1,7 +1,7 @@
 <section class="film-list" *ngIf="films.length">
   <h1>{{name}}</h1>
   <mat-card class="film-card" *ngFor="let film of films; let i = index">
-    <mat-card-title>{{film.title}}</mat-card-title>
+    <mat-card-title>{{film.title}} <br> Genre: {{film.genre}}</mat-card-title>
     <mat-card-content>
       <img
         mat-card-image

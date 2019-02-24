@@ -1,11 +1,4 @@
-.mat-card-image {
-  max-width: 100px;
-}
-
-.film-card:nth-child(odd) {
-  background-color: #ECEFF1;
-}
-
-.film-card:nth-child(even) {
-  background-color: #CFD8DC;
-}
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~bootstrap/dist/css/bootstrap-reboot';
+@import '~bootstrap/dist/css/bootstrap-grid';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';

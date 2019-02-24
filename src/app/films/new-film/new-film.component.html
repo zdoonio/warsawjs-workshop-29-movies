@@ -1,0 +1,58 @@
+<mat-card>
+<form [formGroup]="filmForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col col-md-6">
+
+      <mat-form-field>
+        <label for="title">Film title</label>
+        <input matInput
+               type="text"
+               id="title"
+               formControlName="title">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <label for="genre">Film genre</label>
+        <input matInput
+               type="text"
+               id="genre"
+               formControlName="genre">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <label for="numberInStock">Number in stock</label>
+        <input matInput
+               type="number"
+               class="mdc-button"
+               id="numberInStock"
+               formControlName="numberInStock">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <label for="dailyRentalRate">Daily rental rate</label>
+        <input matInput
+               type="number"
+               id="dailyRentalRate"
+               formControlName="dailyRentalRate">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <label for="imageUrl">Image URL</label>
+        <input matInput
+               type="text"
+               id="imageUrl"
+               formControlName="imageUrl">
+      </mat-form-field>
+      <br>
+
+      <button type="submit"
+              color="primary"
+              mat-raised-button>Add Movie</button>
+    </div>
+  </div>
+</form>
+</mat-card>
