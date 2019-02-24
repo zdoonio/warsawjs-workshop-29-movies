@@ -10,6 +10,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="toggleFilmDetails()">Show details</button>
+      <button mat-raised-button color="primary" (click)="editMovie(film)">Edit</button>
       <button mat-raised-button color="warn" (click)="deleteMovie(film)">Delete</button>
     </mat-card-actions>
     <app-film-details *ngIf="filmsDetailIsVisible" [film]=film></app-film-details>

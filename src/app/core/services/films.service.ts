@@ -14,14 +14,15 @@ export class FilmsService {
   getFilms(): Observable<Film[]> { return this.httpClient.get<Film[]>(this.moviesUrl); }
 
   addFilm(film: Film) {
-    this.httpClient.post(this.moviesUrl, film).subscribe(
-      data  => {
-        console.log('POST Request is successful ', data);
-      },
-      error  => {
-        console.log('Error', error);
-      }
-    );
+    return this.httpClient.post(this.moviesUrl, film);
+  }
+
+  getFilmById(filmId: string) {
+    return this.httpClient.get<Film>(this.moviesUrl + '/' + filmId);
+  }
+
+  updateFilm(film: Film) {
+    return this.httpClient.put(this.moviesUrl + '/' + film.id, film);
   }
 
   deleteFilm(film: Film) {

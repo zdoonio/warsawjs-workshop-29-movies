@@ -33,8 +33,14 @@ export class NewFilmComponent implements OnInit {
     if (this.filmForm.invalid) {
       return;
     }
-    console.log(this.filmForm.value);
-    this.filmsService.addFilm(this.filmForm.value as Film);
+    this.filmsService.addFilm(this.filmForm.value as Film).subscribe(
+      data  => {
+        console.log('POST Request is successful ', data);
+      },
+      error  => {
+        console.log('Error', error);
+      }
+    );
     this.router.navigate(['/']);
   }
 

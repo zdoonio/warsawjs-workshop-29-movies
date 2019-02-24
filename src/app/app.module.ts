@@ -14,6 +14,7 @@ import { NewFilmComponent } from './films/new-film/new-film.component';
 import { MatInputModule } from '@angular/material';
 import { AppRoutingModule } from './app-routings.modules';
 import { MenuComponent } from './nav/menu/menu.component';
+import { EditFilmComponent } from './films/edit-film/edit-film.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MenuComponent } from './nav/menu/menu.component';
     FilmsListComponent,
     FilmDetailsComponent,
     NewFilmComponent,
-    MenuComponent
+    MenuComponent,
+    EditFilmComponent
   ],
   imports: [
     BrowserModule,

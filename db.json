@@ -2,7 +2,7 @@
   "movies": [
     {
       "id": 1,
-      "title": "Terminator",
+      "title": "Dupa",
       "genre": "Action",
       "numberInStock": 6,
       "dailyRentalRate": 2.5,
@@ -73,11 +73,11 @@
       "imageUrl": "http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png"
     },
     {
-      "title": "fafa",
-      "genre": "ffafa",
+      "title": "Rambor",
+      "genre": "Fajne",
       "numberInStock": 4,
       "dailyRentalRate": 4,
-      "imageUrl": "fafafa",
+      "imageUrl": "gagagas",
       "id": 10
     }
   ]

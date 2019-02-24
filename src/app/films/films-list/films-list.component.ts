@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Film} from '../film';
 import {FilmsService} from '../../core/services/films.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-films-list',
@@ -13,7 +14,7 @@ export class FilmsListComponent implements OnInit {
   public films: Film[] = [];
   public errorMessages = 'Cannot connect with service';
   public filmsDetailIsVisible = false;
-  constructor(private filmsService: FilmsService) {}
+  constructor(private filmsService: FilmsService, private router: Router) {}
 
   ngOnInit() {
     this.filmsService.getFilms().subscribe(
@@ -28,8 +29,8 @@ export class FilmsListComponent implements OnInit {
     this.filmsDetailIsVisible = !this.filmsDetailIsVisible;
   }
 
-  public newMovie(): void {
-    this.filmsService
+  public editMovie(film): void {
+    this.router.navigate(['edit/' + film.id]);
   }
 
   public deleteMovie(film): void {
